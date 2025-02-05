@@ -47,13 +47,11 @@ void setup()
 
 void loop()
 {
-  static bool toggle = false;
-  if(isWaterDetected(toggle))
+  if(isWaterDetected(0) and isWaterDetected(1)) // check if water is detected on both electrodes
   {
     digitalWrite(output, HIGH);
   } else 
   {
     digitalWrite(output, LOW);
   }
-  toggle = !toggle;
 }
